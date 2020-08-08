@@ -132,7 +132,6 @@ module.exports = class KASClient {
    * @param {number} amount cents to pay
    */
   async pay (type, identity, amount) {
-    this._processToken(token)
     this._processAmount(amount)
     const res = await fetch(new URL('/api/pay', this.base), {
       method: 'post',
